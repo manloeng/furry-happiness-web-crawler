@@ -1,1 +1,0 @@
-# furry-happiness-web-crawler
