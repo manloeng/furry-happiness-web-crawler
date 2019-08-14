@@ -4,6 +4,6 @@ const apiController = require('./controllers/apiController.js')
 
 app.use(express.json());
 
-app.get("/api", apiController)
+app.post("/api", apiController)
 
 module.exports = app;
