@@ -24,6 +24,7 @@ class CreateForm extends Component {
 
   handleSubmit = e => {
     const { url } = this.state;
+    const { setStats } = this.props;
     e.preventDefault();
     this.postURL({ url }).then(home => {
       this.props.setStats(home);
