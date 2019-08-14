@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Axios from "axios";
+import React, { Component } from 'react';
+import Axios from 'axios';
 
 class CreateForm extends Component {
   state = {
-    url: ""
+    url: ''
   };
 
   render() {
@@ -22,13 +22,13 @@ class CreateForm extends Component {
     this.setState({ url: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     const { url } = this.state;
     const { setStats } = this.props;
     e.preventDefault();
-    this.postURL({ url }).then(home => {
-      this.props.setStats(home);
-      this.setState({ url: "" });
+    this.postURL({ url }).then((home) => {
+      setStats(home);
+      this.setState({ url: '' });
     });
   };
 
