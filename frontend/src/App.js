@@ -1,8 +1,7 @@
-
-import React, { Component } from "react";
-import "./App.css";
-import CreateForm from "./Components/CreateForm";
-import ChartDisplay from './ChartDisplay'
+import React, { Component } from 'react';
+import './App.css';
+import CreateForm from './Components/CreateForm';
+import ChartDisplay from './ChartDisplay';
 
 class App extends Component {
   state = { stats: null };
@@ -12,12 +11,12 @@ class App extends Component {
       <div className="App">
         <p>Home!</p>
         <CreateForm setStats={this.setStats} />
-        <ChartDisplay />
+        <ChartDisplay number={this.state.stats} />
       </div>
     );
   }
 
-  setStats = stats => {
+  setStats = (stats) => {
     this.setState({ stats });
   };
 }
