@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Axios from "axios";
 
 class CreateForm extends Component {
   state = {
@@ -24,10 +25,17 @@ class CreateForm extends Component {
   handleSubmit = e => {
     const { url } = this.state;
     e.preventDefault();
-    api.postURL({ url }).then(data => {
-      console.log(data);
+    this.postURL({ url }).then(home => {
+      this.props.setStats(home);
       this.setState({ url: "" });
     });
+  };
+
+  postURL = async ({ url }) => {
+    const URL = ``;
+    // const { data: { home } } = await Axios.post(URL, { url});
+    // return home;
+    return 0.73;
   };
 }
 
