@@ -1,5 +1,7 @@
-const getLinks = (res, req, next) => {
-  console.log('hi, it works')
+const doStuff = require('../models/apiModel');
+
+const getLinks = (req, res, next) => {
+  doStuff(req.body)
 }
 
 module.exports = getLinks;
