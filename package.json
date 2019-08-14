@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/manloeng/furry-happiness-web-crawler/issues"
   },
-  "homepage": "https://github.com/manloeng/furry-happiness-web-crawler#readme"
+  "homepage": "https://github.com/manloeng/furry-happiness-web-crawler#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
